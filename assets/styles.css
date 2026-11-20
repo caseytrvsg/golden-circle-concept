@@ -466,7 +466,8 @@ a.ccard:hover { box-shadow: var(--shadow); }
 
 /* Prose */
 .prose { max-width: 760px; padding: 48px 0 96px; }
-.prose h3 { margin-top: 1.6em; }
+.prose h3 { margin-top: 1.6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+.prose__lead { font-size: 1.12rem; color: var(--ink) !important; }
 .prose p { color: var(--ink-2); }
 
 /* Footer */
@@ -546,7 +547,7 @@ a.ccard:hover { box-shadow: var(--shadow); }
 
 /* Mobile nav strip (second header row on small screens) */
 .mobilenav { display: none; gap: 4px; justify-content: center; background: var(--cream); border-bottom: 1px solid var(--line); padding: 6px 0; }
-.mobilenav a { text-decoration: none; font-weight: 600; font-size: .9rem; padding: 6px 14px; border-radius: 999px; color: var(--ink-2); }
+.mobilenav a { text-decoration: none; font-weight: 600; font-size: .86rem; padding: 6px 10px; white-space: nowrap; border-radius: 999px; color: var(--ink-2); }
 .mobilenav a.is-active { color: var(--red); background: rgba(143, 29, 32, .07); }
 
 @media (max-width: 720px) { .mobilenav { display: flex; } }
