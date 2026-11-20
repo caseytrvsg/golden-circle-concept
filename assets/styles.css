@@ -268,6 +268,34 @@ p { margin: 0 0 1em; }
 .visit__map, .contact__map { border-radius: 18px; overflow: hidden; min-height: 420px; border: 1px solid rgba(255, 255, 255, .12); }
 .visit__map iframe, .contact__map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; filter: saturate(.85); }
 
+/* Reviews */
+.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.review {
+  margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 26px 22px;
+  display: flex; flex-direction: column; position: relative; overflow: hidden;
+}
+.review::before {
+  content: "“"; position: absolute; top: -18px; right: 14px; font-family: var(--serif); font-size: 8rem; line-height: 1;
+  color: var(--gold); opacity: .22; pointer-events: none;
+}
+.review--lead { background: var(--red); color: #fff; border-color: var(--red); background-image: var(--lattice); }
+.review--lead blockquote { color: #fff !important; }
+.review--lead figcaption small, .review--lead figcaption small a { color: rgba(255, 255, 255, .75) !important; }
+.review--lead .review__avatar { background: var(--gold); color: var(--red-ink); }
+.review__stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.review__stars svg { width: 18px; height: 18px; fill: var(--gold); }
+.review__title { font-size: 1.45rem; margin-bottom: 10px; }
+.review blockquote { margin: 0 0 22px; color: var(--ink-2); font-size: 1rem; line-height: 1.6; flex: 1; }
+.review figcaption { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, .08); }
+.review--lead figcaption { border-top-color: rgba(255, 255, 255, .18); }
+.review figcaption strong { display: block; font-size: .95rem; }
+.review figcaption small { display: block; font-size: .8rem; color: var(--muted); }
+.review figcaption small a { color: var(--muted); }
+.review__avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(143, 29, 32, .1); color: var(--red); display: grid; place-items: center; font-weight: 800; flex: none; }
+.reviews__src { text-align: center; font-size: .85rem; color: var(--muted); margin-top: 28px; }
+@media (max-width: 960px) { .reviews__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .reviews__grid { grid-template-columns: 1fr; } }
+
 /* ---------- Menu page ---------- */
 .menuhero, .pagehead { background: var(--red-ink); color: #fff; background-image: var(--lattice); }
 .menuhero__inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 48px 0 36px; flex-wrap: wrap; }
